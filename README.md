@@ -22,6 +22,8 @@ activity labels as present in separate files in the original data.
 
 - Features are normalized and bounded within [-1,1].
 - List of all fields is in Getting_Data_week4_Codebook.txt
+- The summary dataset is identical, except all fields have the
+  prefix "avg_" to indicate they are averages by activity and subject.
 
 run_analysis.R
 ==============
