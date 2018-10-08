@@ -29,7 +29,7 @@ run_analysis.R
 Usage: 
 1. Unzip the dataset into the working directory
 in its original folder structure.
-2. Install packages dplyr and tidyr if not present.
+2. Install package dplyr if not present.
 3. Run the script.
 
 Details: 
