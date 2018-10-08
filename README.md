@@ -22,12 +22,38 @@ activity labels as present in separate files in the original data.
 
 - Features are normalized and bounded within [-1,1].
 - List of all fields is in Getting_Data_week4_Codebook.txt
-[1] Original dataset:
 
-==================================================================
+run_analysis.R
+==============
+
+Usage: 
+1. Unzip the dataset into the working directory
+in its original folder structure.
+2. Install packages dplyr and tidyr if not present.
+3. Run the script.
+
+Details: 
+The script reads the codebook and converts the measure names
+to acceptable field names. Those are applied to the test and training
+data by read.table().
+
+Next supporting data (subject and activity) is read and the columns are
+decoded using merge and joined using cbind().
+
+The combined test and train tables are then converted to a dplyr tibble.
+This allows fast selection of the desired measures.
+
+At this point the tidy dataset is written to file.
+
+For the last requirement in step 5, dplyr is used again to group and summarize the data.
+All measure field names are prefixed with avg_ to indicate they are the average/mean
+values per activity and subject.
+
+
+[1] Original dataset:
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
-==================================================================
+
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova.
